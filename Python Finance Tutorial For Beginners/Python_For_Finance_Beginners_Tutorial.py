@@ -363,7 +363,7 @@ plt.show()
 # Import the `api` model of `statsmodels` under alias `sm`
 import statsmodels.api as sm
 from pandas import tseries
-from pandas.core import datetools
+# from pandas.core import datetools
 
 # Isolate the adjusted closing price
 all_adj_close = all_data[['Adj Close']]
@@ -391,6 +391,8 @@ model = sm.OLS(return_data['MSFT'],X).fit()
 
 # Print the summary
 print(model.summary())
+#Warnings:
+#[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
 
 # In[66]:
